@@ -12,7 +12,7 @@ services:
       - $PWD/:/root/pwa
     working_dir: /root/pwa
     ports:
-     - '85:80'
+     - '8081:80'
     networks:
       - net
 networks:
