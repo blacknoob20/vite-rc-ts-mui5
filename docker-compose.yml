@@ -1,0 +1,19 @@
+version: '2.2'
+services:
+  node:
+    container_name: node
+    image: node:alpine
+    #cpuset: '0'
+    #mem_limit: 64m
+    stdin_open: true
+    tty: true
+    volumes:
+      - $PWD/.npm:/root/.npm
+      - $PWD/:/root/pwa
+    working_dir: /root/pwa
+    ports:
+     - '85:80'
+    networks:
+      - net
+networks:
+  net:
